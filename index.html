@@ -771,8 +771,8 @@
                     <td><s>January 8, 2025</s></td>
                 </tr>
                 <tr style="background-color:#ffffff">
-                    <td>Competition Starts (Leaderboard opens on <a href="https://eval.ai/web/challenges/challenge-page/2476/">EvalAI</a>)</td>
-                    <td>March 17, 2025</td>
+                    <td><s>Competition Starts (Leaderboard opens on <a href="https://eval.ai/web/challenges/challenge-page/2476/">EvalAI</a>)</s></td>
+                    <td><s>March 17, 2025</s></td>
                 </tr>
                 <tr style="background-color:#eeeeee">
                     <td>Competition Ends (Leaderboard closes on <a href="https://eval.ai/web/challenges/challenge-page/2476/">EvalAI</a>)</td>
@@ -797,16 +797,17 @@
         </table>
         </br>
 
-         Evaluation Metrics:
+         <b>Evaluation Metrics:</b>
          <ul>
-             <li><b>Precision:</b> The ratio of correctly detected objects to the total number of detected objects, measuring the accuracy of positive predictions.</li>
-            <li><b>Recall:</b> The ratio of correctly detected objects to the total number of actual objects, assessing the model's ability to find all relevant instances.</li>
-            <li><b>3D IoU (Intersection over Union):</b> The ratio of the intersection volume to the union volume between a predicted and a ground truth 3D bounding box, measuring spatial overlap.</li>
-            <li><b>Position RMSE (Root Mean Squared Error):</b> The square root of the mean squared differences between predicted and ground truth positions, evaluating localization accuracy.</li>
-            <li><b>Rotation RMSE:</b> The square root of the mean squared differences between predicted and ground truth rotations, quantifying angular estimation errors.</li>
-            <li><b>3D mAP (Mean Average Precision):</b> The average precision across different intersection-over-union (IoU) thresholds in 3D object detection, reflecting overall detection performance.</li>
+             <li><b>Precision:</b> Ratio of correctly detected objects to the total number of detected objects, measuring accuracy of positive predictions.</li>
+            <li><b>Recall:</b> Ratio of correct detections to the total number of actual objects, assessing the model's ability to find all relevant instances.</li>
+            <li><b>3D IoU:</b> Ratio of intersection volume to the union volume between predicted and ground truth 3D bounding box, measuring spatial overlap.</li>
+            <li><b>Position RMSE:</b> Square root of the mean squared differences between predicted and ground truth positions, evaluating localization accuracy.</li>
+            <li><b>Rotation RMSE:</b> Square root of the mean squared differences between predicted and ground truth rotations, quantifying angular estimation errors.</li>
+            <li><b>3D mAP:</b> Average precision across intersection-over-union (IoU) thresholds in 3D object detection, reflecting overall detection performance.</li>
          </ul>
-        Challenge Submission:</br>
+        </br>
+        <b>Challenge Submission:</b></br>
         <a href="https://github.com/tum-traffic-dataset/coopdet3d">CoopDet3D</a> generates detection (inference) files in OpenLABEL (.json) format (<a href="https://github.com/tum-traffic-dataset/coopdet3d/blob/master/README.md?plain=1#L386">see example</a>). In case you are developing your own model, please output the detection results in the OpenLABEL format following <a href="https://github.com/tum-traffic-dataset/coopdet3d/blob/master/tools/inference_to_openlabel.py#L169">this schema</a>.
         After you have generated the detection files for the test set (100 frames), please combine them into a single OpenLABEL (.json) file using <a href="https://github.com/tum-traffic-dataset/tum-traffic-dataset-dev-kit/blob/main/src/postprocessing/combine_detections.py">this script</a>.
         Finally, submit the accumulated OpenLABEL (.json) file to the <a href="https://eval.ai/web/challenges/challenge-page/2476/">EvalAI</a> platform.
